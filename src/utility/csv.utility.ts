@@ -1,5 +1,9 @@
+import {mkdir} from '../utility/file.utility';
 import {existsSync, WriteStream, createWriteStream} from 'fs';
 import {indices, blockOrder, transactionOrder, tagOrder} from './order.utility';
+
+mkdir(`${process.cwd()}/snapshot`);
+mkdir(`${process.cwd()}/cache`);
 
 export interface CSVStreams {
     block: {

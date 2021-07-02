@@ -3,6 +3,7 @@ version: "3"
 services:
   # Postgres Configuration
   postgres:
+    shm_size: 256mb
     image: postgres:12
     volumes:
       - database:/var/lib/postgresql/data
@@ -18,6 +19,9 @@ services:
     command: -p ${DATABASE_PORT}
   # Gateway Configuration
   server:
+    depends_on:
+      - postgres
+    #network_mode: host
     build:
       context: .
       dockerfile: ./docker/gateway.dockerfile
