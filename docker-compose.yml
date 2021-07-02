@@ -21,12 +21,14 @@ services:
   server:
     depends_on:
       - postgres
-    network_mode: host
+    #network_mode: host
     build:
       context: .
       dockerfile: ./docker/gateway.dockerfile
     volumes:
       - app:/app
+    links:
+      - postgres
     ports: 
       - ${PORT}:${PORT}
     environment:
