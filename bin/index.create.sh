@@ -21,7 +21,8 @@ CREATE INDEX "blocks_mined_at" ON blocks USING BTREE ("mined_at");
 
 --- Transaction Indices
 --- Transaction Height Index
-CREATE INDEX "transactions_height" ON transactions USING BTREE ("height");
+CREATE INDEX "transactions_height1" ON transactions USING BTREE ("height" ASC, "id" ASC);
+CREATE INDEX "transactions_height2" ON transactions USING BTREE ("height" DESC, "id" ASC);
 --- Transaction Target Index
 CREATE INDEX "transactions_target" ON transactions USING BTREE ("target");
 --- Transaction Owner Address Index
