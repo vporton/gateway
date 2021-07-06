@@ -1,7 +1,7 @@
 #!/bin/bash
 echo Indexing database please wait
 
-sudo -u postgres psql -d arweave <<EOF
+sudo -u postgres psql --host localhost --user arweave -d arweave <<EOF
 
 SET statement_timeout to 0;
 SET maintenance_work_mem TO '8GB';
