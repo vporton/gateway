@@ -28,7 +28,7 @@
     "start": "npm run migrate:latest && node dist/src/Gateway.js"
   },
   "dependencies": {
-    "apollo-server-express": "^2.19.2",
+    "apollo-server-express": "^3.13.0",
     "arweave": "^1.10.6",
     "arweave-bundles": "^1.0.3",
     "bip39": "^3.0.3",
@@ -39,7 +39,7 @@
     "detect-mocha": "^0.1.0",
     "dotenv": "^8.2.0",
     "event-stream": "^4.0.1",
-    "express": "^4.17.1",
+    "express": "^4.22.0",
     "express-pg-session": "^1.1.0",
     "express-session": "^1.17.1",
     "fs": "^0.0.1-security",
